@@ -84,7 +84,7 @@ export function HomeIntro () {
                             </button>
                     </div> 
                     <div className="bounnce">
-                        <img data-animation='fade'  src={earth} alt="bounce-erath" />
+                        <img data-animation='bounce' src={earth} alt="bounce-erath" />
                     </div>
                 </div>
                 <div className="right">

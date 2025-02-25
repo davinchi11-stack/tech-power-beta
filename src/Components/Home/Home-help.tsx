@@ -15,7 +15,7 @@ export function HomeHelp () {
                                 <p data-animation='para'>Are you indecisive about what course to choose? Would you like to talk to a Tech expert over any tech related issue? We have professionals in place who are ready and willing to be of help.</p>
                             </div>
                             <div className="btn">
-                                <button data-animation='bounce'>Get Help</button>
+                                <button >Get Help</button>
                             </div>
                         </div>
                     </div>

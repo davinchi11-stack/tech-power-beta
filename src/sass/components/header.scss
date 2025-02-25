@@ -63,8 +63,9 @@
                         background: white;
                         top: 0;
                         height: 100vh;
-                        bottom: 0;
+                        bottom:0;
                         width: 100%;
+                        padding-bottom: 45px;
                         // left: -100px;
                     }
 
@@ -292,7 +293,9 @@
                         border-color: transparent;
                         text-transform: capitalize;
                         border-radius: 4px;
-                         font-size: 16px;
+                         font-size: 14px;
+                         position: relative;
+                         left: 20px;
                          border: 1px solid transparent;
                         padding: 10px 16px;
                         transition: all 250ms ease-in-out;
