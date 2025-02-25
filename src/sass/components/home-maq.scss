@@ -1,0 +1,27 @@
+
+.home-marquee{
+  background-color: $bs-head-hover;
+    padding-top: 20px ;
+    padding-bottom: 15px;
+  .marq{
+     @include flex(space-between , center, null , 3rem);
+
+   
+     .main-marq{
+        @include flex(null , center, null , 1rem);
+        .icon{
+            svg{
+                height: fluid(40,45);
+                fill: white;
+            }
+        }
+
+        .txt{
+            text-transform: capitalize;
+            font-size: fluid(19,22);
+            font-family: $font_two;
+            color: white;
+        }
+     }
+  }
+}

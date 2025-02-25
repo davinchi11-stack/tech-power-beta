@@ -1,0 +1,92 @@
+
+$error-color: #fff;
+$bg-color: #6610f2;
+$text-color: #ffffff;
+$button-bg: #082a5e93;
+$button-hover: #082a5e;
+
+.error-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $bg-color;
+  text-align: center;
+  overflow: hidden;
+
+  .error {
+    color: $text-color;
+    animation: fadeIn 1s ease-in-out;
+    
+    h1 {
+      font-size: 15rem;
+      @media (max-width: 800px) {
+        font-size: 10rem;
+      }
+      @media (max-width: 487px) {
+        font-size: 8rem;
+      }
+      font-weight: bold;
+      margin: 0;
+      color: $error-color;
+      animation: shake 1.5s ease-in-out infinite;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      @media (max-width: 800px) {
+        font-size: 1rem;
+      }
+     
+    }
+
+    .b {
+      margin-top: 20px;
+
+      button {
+        background: $button-bg;
+        border: none;
+        color: white;
+        padding: 10px 24px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        animation: popIn 0.5s ease-in-out 1.5s backwards;
+        @media (max-width: 800px) {
+            font-size: 1rem;
+          }
+        &:hover {
+          background: $button-hover;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

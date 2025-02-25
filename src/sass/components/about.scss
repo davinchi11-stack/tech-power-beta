@@ -1,0 +1,273 @@
+
+.about{
+    position: relative;
+   
+
+    &_main{
+       @include flex_col(3rem);
+        .info{
+            @include flex(space-between, center , null, null);
+            @include media("<=tablet"){
+                flex-direction: column;
+                gap: 4rem;
+            }
+
+            .left-info{
+                width: 45%;
+                @include flex_col(2rem);
+                @include media("<=tablet"){
+                    width: 100%;
+                }
+    
+                span.we{
+                    display: inline-block;
+                    background: #E7EFFC;
+                    width: 120px;
+                    font-size: 17px;
+                    padding: 7px;
+                    text-align: center;
+                    color: $bs-purple;
+                    font-family: $font_two;
+                    font-weight: 600;
+                }
+                .txt{
+                    @include flex_col(1.5rem);
+                    width: 80%;
+                    @include media("<=tablet"){
+                        width: 95%;
+                    }
+                    
+                    h1{
+                        color : $bs-head-txt;
+                        font-size: fluid(28,35);
+                        line-height: fluid(35, 45);
+                         
+                        // span{
+                        //     color: $bs-purple;
+                        // }
+                        @include media("<phone"){
+                           br{
+                            display: none;
+                           }
+                        }
+                       
+                    }
+
+                    p{
+                      color: $bs-p-color;  
+                      font-size: fluid(15,16px) ;
+                      &.p-boss{
+                        font-size: fluid(17,19);
+                        color: $bs-head-txt;
+                        font-weight: 600;
+                      }
+                    }
+                }
+            }
+
+            .right-info{
+                width: 50%;
+                @include flex_col(3rem);
+                @include media("<=tablet"){
+                    width: 100%;
+                }
+
+                .abt{
+                    @include flex_col(1rem);
+                    .abt-main{
+                        @include flex_col(0.5rem);
+                        h1{
+                            font-size: 35px;
+                            color: $bs-head-txt;
+                            span{
+                                color: $bs-head-hover;
+                            }
+                        }
+                        .long{
+                            display: flex;
+                            gap: 0.5rem;
+                            align-items: center;
+                            // justify-content: center;
+                            border-radius: 50%;
+                            padding-left: 10px;
+                            span{
+                                display: inline-block;
+                                height: 0.2rem;
+                                width: 0.2rem;
+                                background: $bs-head-txt;
+                                &.lg{
+                                    width: 90px;
+                                }
+                            }
+                        }
+                    }
+
+                    .txt{
+                        width: 80%;
+                        @include media("<=tablet"){
+                            width: 100%;
+                        }
+                        color: $bs-p-color;
+                        font-size: fluid(15,18);
+                    }
+                }
+
+            }
+        }
+
+        .second-info{
+            padding-top: 3rem;
+            @include flex_col(2rem);
+            @include media("<=tablet"){
+              padding-top: 2rem;
+            }
+            .text{
+                text-align: center;
+                @include flex_col(1.5rem);
+                
+                h1{
+                    font-size: fluid(23,40);
+                    color: $bs-head-txt;
+                    span{
+                        color: #FAB123;
+                    }
+                }
+                p{
+                    width: 60%;
+                    margin: 0 auto;
+                    font-size: fluid(16,20);
+                    color: $bs-head-txt;
+                    @include media("<=tablet"){
+                        width: 95%;
+                    }
+                }
+
+                
+            }
+
+            .img{
+                width: 90%;
+                margin: 0 auto;
+                border-radius: 100px;
+                overflow: hidden;
+                @include media("<=phone-medium"){
+                   height: 500px;
+                   border-radius: 50px;
+                   width: 100%;
+                }
+
+
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: inherit;
+                    height: 100%;
+                    @include media("<=phone-medium"){
+                        object-position: -68px;
+                     }
+                }
+            }
+        }   
+        
+        .faq-info{
+            @include flex(space-between, null , null, null);
+            padding-top: 5rem;
+            @include media("<=tablet"){
+                flex-direction: column;
+                gap: 3rem;
+                align-items: center;
+                padding-top: 2rem;
+            }
+            .faq-left{
+                width: 50%;
+                @include media("<=tablet"){
+                    width: 100%;
+                    text-align: center;
+                }
+                background-image: green;
+                 @include flex_col(1.5rem);
+                 h1{
+                    font-size: fluid(30, 35) ;
+                    line-height: fluid(35,43);
+                    color: $bs-head-txt;
+                    text-transform: capitalize;
+                    span{
+                        color: $bs-head-hover;
+                    }
+                 }
+                 p{
+                    color: $bs-p-color;
+                    font-size: fluid(15, 18);
+                    width: 80%;
+                    @include media("<=tablet"){
+                        margin: 0 auto;
+                    }
+                 }
+            }
+
+            .faq-right{
+                width: 50%;
+                @include media("<=tablet"){
+                    width: 100%;
+                }
+
+                @include flex_col(1rem);
+                .faq-card{
+                    @include flex_col(1rem);
+                    width: fluid(300,450);
+                    margin: 0 auto;
+                    
+                    
+                    .qu{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 0.4rem;
+                        cursor: pointer;
+                        border: 1px solid #ccc;
+                        padding: 15px;
+                        border-radius: 20px;
+                        box-shadow: 0px 6px 8px #00000015;
+
+
+                        .icon{
+                           
+                            background: transparent;
+                            @include flex(center, center, null, null);
+                            svg{
+                                fill: $bs-head-hover;
+                            }
+                        }
+                        .txt{
+                            font-size: fluid(15,18);
+                            color: $bs-head-txt;
+                        }
+                    }
+
+                    .ans{
+                        padding: 22px;
+                        border: 1px solid #ccc;
+                        border-radius: 20px;
+                        box-shadow: 0px 4px 6px #0000002c;
+                        background-color: $bs-purple;
+                        p{
+                            color: #fff;
+                            font-size: fluid(15,17);
+                        }
+                       
+                      
+                    &.tg{
+                        max-height: 100px;
+                    }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

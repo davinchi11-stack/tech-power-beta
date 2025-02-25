@@ -1,0 +1,74 @@
+
+
+.help{
+    position: relative;
+    background: #fff;
+    &_main{
+      overflow: hidden;
+      
+        &_card{
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.452);
+            height: 300px;
+            @include media("<tablet"){
+                height: unset;
+                text-align: center;
+            }
+            background: $bs-head-txt;
+            padding: 30px;
+            border-radius: 6px;
+            @include flex(space-between, null, null, null);
+            color: #fff;
+
+            .first{
+                .txt{
+                    @include flex_col(2rem);
+
+
+                    .top{
+                        @include flex_col(0.5rem);
+                        p{
+                         font-size: 16px;
+                        }
+                        h2{
+                            font-size: 25px;
+                        }
+                    }
+                    .middle{
+                        p{
+                            width: 65%;
+                            @include media("<tablet"){
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .btn{
+                        @include media("<tablet"){
+                            align-self: center;
+                        }
+                        button{
+                            text-transform: capitalize;
+                            &:hover{
+                                background: $bs-head-hover;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .second{
+                @include media("<tablet"){
+                    display: none;
+                }
+                .img{
+                    height: 400px;
+                    img{
+                        height: 100%;
+                        object-fit: cover;
+                        position: relative;
+                        bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

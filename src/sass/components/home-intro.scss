@@ -1,0 +1,211 @@
+
+.home-intro{
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: unset;
+    padding-top: 5rem;
+    @include media("<tablet"){
+        padding-top: 8rem;
+    }
+
+     &_main{
+        @include flex(space-between, center, null, null);
+        @include media("<tablet"){
+            flex-direction: column;
+            gap: 5rem;  
+        }
+        .left{
+            width: 50%;
+            @include flex_col(2.5rem);
+            position: relative;
+            @include media("<=tablet"){
+                width: 100%;
+                text-align: center;
+            }
+            .txt{
+                @include flex_col(2.4rem);
+                .inner{
+                    @include flex_col(1rem);
+                    h1{
+                        font-size: fluid(30 , 50);
+                        color: $bs-head-txt;
+                    
+                    }
+                    .skill{
+                        position: relative;
+                        padding-bottom: 10px;
+                        color: #1363DF;
+                     svg{
+                        position: absolute;
+                        width: fluid(100, 150);
+                        right: 0;
+                        color: #FAB123;
+                     }
+                    }
+                }
+                p{
+                    width: 70%;
+                    font-size: 17px;
+                    font-family: $font_two;
+                    color: $bs-p-color;
+                    @include media('<=tablet'){
+                        margin: 0 auto;
+                        width: 90%;
+                    }
+                    
+                }
+            }
+
+            .bounnce{
+                position: absolute;
+                top: fluid(-60, -100);
+                img{
+                    height: fluid(40, 60);
+                }
+            }
+
+            .btn{
+                @include media('<=tablet'){
+                    align-self: center;
+                }
+                button{
+                    background: #1363DF;
+                    color: #fff;
+                    @include flex(center , center , null ,0.5rem);
+                    text-transform: uppercase;
+                    font-size: 1.03rem;
+                    font-family: $font_two;
+                    padding: 13px 23px;
+                    font-weight: 600;
+                    border-radius: 4px;
+                    span{
+                        display: inline-block;
+                        svg{
+                            position: relative;
+                            top: 1.5px ;
+                            height: 13px;
+                        }
+                    }
+                  
+                }
+            }
+        }
+
+        .right{
+            width: 40%;
+            overflow: hidden;
+            position: relative;
+            @include media("<=tablet"){
+                width: 60%;
+                margin: 0 auto;
+            }
+            @include media("<=phone"){
+                width: 80%;
+                margin: 0 auto;
+            }
+            @include media("<=phone-medium"){
+                width: 100%;
+                margin: 0 auto;
+            }
+            .img{
+                height: fluid(400 ,580);
+                img{
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .icon{
+                position: absolute;
+                top: 90px;
+                @include media("<tablet"){
+                    top: 50px;
+                }
+                
+                
+                img{
+                    height: fluid(60,80);
+                }
+                &.second{
+                    left:fluid(30, 80);
+                    @include media("<=phone-medium"){
+                        // left: 0;
+                     }
+                }
+                &.first{
+                    right :40px;
+                    top: 110px;
+                    @include media("<=phone-medium"){
+                       right: 0;
+                    //    top: 20px;
+                    }
+                    img{
+                        height: 50px;
+                    }
+                }
+            }
+
+            .card-info{
+                width: 100%;
+                position: absolute;
+                top: 40%;
+                display: flex;
+                .card{
+                    width: fluid(170, 180);
+                    background: rgba(255,255,255,0.8);
+                    @include flex_col(1rem);
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    padding: 10px;
+                    border-radius: 15px;
+                   backdrop-filter: blur(10px);
+                    .head{
+                        height: 50px;
+                        width: 50px;
+                        background:#12BB6A;
+                        padding: 2px;
+                        @include flex(center, center, null, null);
+                        border-radius: 50%;
+                        box-shadow: 0px 4px 6px #00000067;
+                        svg{
+                            fill: #fff;
+                        }
+                    }
+                    .txt{
+                        @include flex_col(0.5rem);
+                        h2{
+                            font-size: 13.5px;
+                            color: $bs-head-txt;
+                            font-weight: 400;
+                            font-family: $font_two;
+                        }
+                        p{
+                            font-weight: 700;
+                            font-size: 29px;
+                            color: $bs-head-txt;
+                        }
+                    }
+
+                    // &.one{
+                        
+                    // }
+
+                    &.two{
+                        position: absolute;
+                        right: 0;
+                        top: 70%;
+                        @include media("<=phone-medium"){
+                            display: none;
+                        }
+                        .head{
+                          background-color: #8121FB;
+                        }
+                    }
+                }
+            }
+        }
+     }
+}

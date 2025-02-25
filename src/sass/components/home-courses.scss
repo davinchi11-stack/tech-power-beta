@@ -1,0 +1,325 @@
+
+
+// .home-courses{
+//     position: relative;
+//     background: white;
+//       padding: 6rem 0;
+//       @include media("<=phone"){
+//         padding: 5rem 0
+//     }
+
+//     &_main{
+//         @include flex_col(4rem);
+         
+//         .txt{
+//             h1{
+//                 font-size: fluid(28,38);
+//                 color: #143466;
+//                 @include media("<=phone"){
+//                     text-align: center;
+//                 }
+    
+//             }
+//         }
+
+//         .card-main{
+//             display: grid;
+//             grid-template-columns: repeat(3 , 1fr);
+//             gap: 2rem;
+//             justify-self: center;
+//             width: 95%;
+//             margin: 0 auto;
+//             padding: 10px 0;
+ 
+//             @include media("<=desktop-medium"){
+//                 grid-template-columns: repeat(2 , 1fr);
+//                 place-items: center;
+//             }
+//             @include media("<=phone"){
+//                 grid-template-columns: repeat(1 , 1fr);
+//                 place-items: center;
+//             }
+
+//             .card-course{
+//                border-radius: 8px;
+//                 padding: 30px;
+//                 @include flex(null, center, null, 2rem);
+//                 width: fluid(300,380);
+//                 background: #172231;
+//                 color: #fff;
+                
+//                 cursor: pointer;
+//                 box-shadow: 0px 4px 10px #0000006e;
+//                 transition: all 250ms ease-in-out;
+//                 &:hover{
+//                     color: #143466;
+//                    background: #F4F7FB;
+//                   .ic{
+//                     transition: 250ms ease-in-out;
+//                     background: $bs-head-hover;
+//                     .deal{
+//                         svg{
+//                             fill: #fff;
+//                         }
+//                     } 
+//                   }
+//                 }
+//                 .ic{
+//                     background: #fff;
+//                     transition: 250ms ease-in-out;
+//                     border-radius: 8px;
+//                     position: relative;
+//                     @include flex_col(0);
+//                     // width: 70px;
+//                     // height: 70px;
+//                     padding: 14px 20px;
+//                     // padding: 10px;
+//                     box-shadow: 0px 6px 20px #00000042;
+//                     @include flex(center, center, null, null);
+//                     .shine{
+//                         position: relative;
+//                         // top: -15px;
+//                         display: none;
+//                         left: -15px;
+//                         svg{
+//                             height: 38px;
+//                         }
+//                     }
+//                     .deal{
+//                         svg{
+//                             height: fluid(35, 45);
+//                             fill: $bs-head-hover;
+//                         }
+//                     }
+//                 }
+
+//                 .tx{
+//                     h2{
+//                         font-size: fluid(16,19);
+//                         line-height: fluid(23, 25);
+//                         font-weight: 500;
+                    
+//                     }
+//                 }
+//             }
+            
+//         }
+//     }
+// }
+
+
+// .home-course {
+ 
+//     @include flex(center, center, center, null);
+//     background: linear-gradient(135deg, #1e1e2f, #2b2b3b);
+
+//     // background-color: $bs-head-txt;
+//     color: #fff;
+   
+  
+//     &_main {
+//       @include flex(space-between, center, center, 2rem);
+  
+     
+  
+//       .left {
+//         width: 40%;
+//         h1 {
+//           font-size: 38px;
+//           font-weight: 600;
+//         }
+//       }
+  
+//       .right {
+//           width: 50%;
+//         display: flex;
+//         align-items: center;
+//         position: relative;
+        
+//         .slider-container {
+//           width: 100%;
+//           overflow: hidden;
+//           position: relative;
+//           background: rgba(255, 255, 255, 0.1);
+//           padding: 20px;
+//           border-radius: 10px;
+//           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+//         }
+        
+//         .course-card {
+//           padding: 20px;
+//           border-radius: 10px;
+//           text-align: left;
+//           height: 400px;
+//           @include flex_col(1rem);
+//           h2 {
+//             font-size: 1.8rem;
+//           }
+//           p {
+//             font-size: 18px;
+//             opacity: 0.8;
+//             width: 80%;
+//           }
+//           .course-details {
+//             @include flex_col(1rem);
+//             p{
+//               display: flex;
+//               align-items: center;
+//               gap: 0.5rem;
+//               font-size: 19px;
+
+//             }
+//           }
+//         }
+        
+//         // button {
+//         //   background: transparent;
+//         //   border: none;
+//         //   font-size: 2rem;
+//         //   cursor: pointer;
+//         //   color: white;
+//         //   transition: 0.3s;
+//         //   &:hover {
+//         //     // color: #f39c12;
+//         //   }
+//         // }
+
+//         .btn-side{
+//           @include flex(space-between , center , null, null);
+      
+
+//           .enroll{
+//             button{
+//               text-transform: capitalize;
+//               font-size: 18px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+
+
+.home-course{
+    position: relative;
+     padding: 6rem 0;
+     @include media("<=tablet"){
+      padding: 4rem 0
+    }
+    
+    &_main{
+      @include flex(space-between , null, null, 2rem);
+
+      @include media("<=tablet"){
+        flex-direction: column;
+      }
+  
+      .left{
+        width: 50%;
+        @include flex_col(1.5rem);
+        
+        @include media("<=tablet"){
+          width: 100%;
+          align-items: center;
+          text-align: center;
+        }
+    
+
+        h2{
+          font-size: 28px;
+          font-size: 600;
+          color:  $bs-head-txt;
+        }
+        p{
+          width: 80%;
+          font-size: 18px;
+          @include media("<=tablet"){
+            width: 70%;
+            margin: 0 auto;
+          }
+          @include media("<=phone"){
+            width: 100%;
+          }
+      
+
+        }
+       }
+
+       .right{
+        width: 50%;
+         display:  flex;
+         justify-content: center;
+         @include media("<=tablet"){
+          width: 100%;
+        }
+    
+        .course-card{
+          @include flex_col(1.5rem);
+          width: fluid(350, 450);
+          border-radius: 25px;
+          padding: 40px;
+          background: #fff;
+          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    
+          
+          .course-details{
+          
+            @include flex_col(1.5rem);
+            border-radius: 5px;
+            h3{
+              font-size: 20px;
+              line-height: 25px;
+              color: $bs-head-txt;
+            }
+            p{
+              font-size: 16px;
+            }
+          }
+          .course-info{
+            @include flex_col(1rem);
+            flex-direction: row;
+             justify-content: space-between;
+             
+            .evn{
+              @include flex_col(0.2rem);
+              align-items: center;
+              .icon{
+                svg{
+                  fill: $bs-head-hover;
+                }
+              }
+              .txt{
+                font-size: 14px;
+                color: $bs-head-txt;
+              }
+            }
+          }
+
+          .btn-enroll{
+            @include flex(space-between, center, null, null);
+            padding-top: 30px;
+            font-size: 15px;
+
+            .btn-en{
+              button{
+                text-transform: capitalize;
+                font-size: 15px;
+                padding: 8px 20px;
+                transition: all  250ms ease-in-out;
+              }
+            }
+            .navigation-buttons{
+              &:hover{
+                color: $bs-head-txt;
+                transition: all  250ms ease-in-out;
+              }
+            }
+          }
+         }
+       }
+
+     
+      
+    }
+}

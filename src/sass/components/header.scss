@@ -1,0 +1,316 @@
+.header{
+    background: transparent;
+
+    &.sele {
+        position: fixed;
+        top: 0;
+        background: #fff;
+        z-index: 9999;
+        width: 100%;
+        animation-name: head;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
+    }
+    
+    @keyframes head {
+        0% {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+   
+
+
+
+
+
+    &_main{
+        padding: 20px 10px;
+        position: relative;
+        z-index: 9999;
+        nav{
+            @include flex(space-between , center, null , null);
+
+            .left{
+                @include flex(null , center, null , 3rem);
+
+                .logo{
+                    position: relative;
+                    z-index: 9999;
+                    img{
+                        width: fluid(170, 200);
+                    }
+                }
+
+                nav.list{
+                    transition: all 250ms ease-in-out;
+                    right: 0;
+                  
+
+                    &.show{
+                        transform: translateX(0px);
+                    }
+
+                    @include media("<=tablet"){
+                        transform: translateX(1000px);
+                        position: fixed;
+                        right: 0;
+                        background: white;
+                        top: 0;
+                        height: 100vh;
+                        bottom: 0;
+                        width: 100%;
+                        // left: -100px;
+                    }
+
+                    .link{
+                        // background: blue;
+                        @include media("<=tablet"){
+                            @include flex_col(2rem);
+                            height: inherit;
+                            width: 100%;
+                            padding-top: 150px;
+                           
+
+                         }
+                        ul{
+                            @include flex(null , center, null , 2rem);
+                            @include media("<=tablet"){
+                               flex-direction: column;
+                               align-items: start;
+                               gap: unset;
+                            }
+                            li{
+                                position: relative;
+                                font-size: 17px;
+                                color: $bs-head-txt;
+                                cursor: pointer;
+                                transition: all 250ms ease-in-out;
+                                @include media(">phone", "<=desktop-small") {
+                                    font-size: 14px;
+                                    }
+                                    
+                                &:hover{
+                                    color: $bs-head-hover;
+                                }
+                                .active{
+                                    color: $bs-head-hover;
+                                    transition: all 250ms ease-in-out;
+                                }
+                                @include media("<=tablet"){
+                                    width: 100%;
+                                    padding: 18px 14px;
+                                }
+                                &.link-main{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 10px;
+                                    display: inline-block;
+                                    @include media("<=tablet"){
+                                        display: none;
+                                    }
+                                   
+                                    span{
+                                        display: inline-block;
+                                        position: relative;
+                                        top: 3px;
+                                    }
+
+                                    .link-card{
+                                        position: absolute;
+                                        top: 60px;
+                                        background: #fff;
+                                        border-radius: 6px;
+                                        display: none;
+                                         box-shadow:  0px 4px  6px  #00000010;
+                                        &.drop{
+                                            display: block
+                                        }
+                                         
+                                        .li-tb{ 
+                                            @include flex_col(1rem);
+                                            width: 250px;
+                                            padding: 20px;
+                                            align-items: start;
+                                            li{
+                                                color: $bs-head-txt;
+                                                font-size: 16px;
+                                                text-transform: capitalize;
+                                                 &:hover{
+                                                    transform: translateX(6px);
+                                                    transition: all 250ms ease-in-out;
+                                                    color: $bs-head-hover;
+                                                 }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            
+
+                              &.link-mobile{
+                                display: none;
+                                @include media("<=tablet"){
+                                    display: block;
+                                    
+                                }
+                                position: relative;
+                                .txt{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                }
+                                
+                                .icon{
+                                  right: 30px;
+                                    background: $bs-head-hover;
+                                    width: 30px;
+                                    height: 30px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    svg{
+                                        fill: #fff;
+                                    }
+                                }
+                                 
+                                .li-mb{
+                                @include flex_col(1rem);
+                                padding-top: 1rem;
+                                li{
+                                    padding: unset;
+                                    color: $bs-head-txt;
+                                    padding: 0px 10px;
+                                    text-transform: capitalize;
+                                    font-size: 16px;
+                                    &:hover{
+                                        color: $bs-head-hover;
+                                    }
+                                }
+                                   
+                                }
+
+                                &.active{
+                                    .txt{
+                                        .icon{
+                                           background: #ebebeb;
+                                           svg{
+                                            fill: #000;
+                                           }
+                                        }
+                                    }
+                                    
+                                    .li-mb{
+                                        display: none;
+                                    }
+                                }
+                              }
+
+                            }
+                          } 
+        
+                          .sign{
+                            display: none;
+                            @include media("<=tablet"){
+                                display: block;
+                                align-self: center;
+                                button{
+                                    border: 1px solid #d0dae9;
+                                    text-transform: capitalize;
+                                    border-radius: 4px;
+                                    background-color: white;
+                                     font-size: 16px;
+                                    color: #5A7093;
+                                    padding: 10px 16px;
+                                    transition: all 250ms ease-in-out;
+                                    &:hover{
+                                        background: $bs-head-txt;
+                                        color: #fff;
+                                        border-color: transparent
+                                    }
+                                }
+                            }
+                          }
+                    }
+                   
+                 
+                }
+            }
+
+            .right{
+                @include flex(null , center, null , 2rem);
+              &_sign{
+                @include flex(null , center, null , 2rem);
+                .icon{
+                    position: relative;
+                    .item{
+                      height: 25px;
+                      width: 25px;
+                      color: #fff;
+                      background-color: $bs-blue;
+                      position: absolute;
+                      top: -10px;
+                      right: -16px;
+                      padding: 2px;
+                       @include flex(center , center , null, null);
+                       border-radius: 50%;
+                    }
+                  }
+              }
+                .sign{
+                    @include media("<=tablet"){
+                        display: none;
+                    }
+                    &.mn{
+                        display: block;
+                        button{
+                            background-color: #fff;
+                            color: $bs-head-txt;
+                            border: 1px solid #d0dae9;
+                            
+                            @include media("<phone"){
+                                background-color: $bs-head-txt;
+                                color: #fff;
+                            }
+
+                            &:hover{
+                                background-color: $bs-head-txt;
+                                color: #fff;
+                                border: 1px solid transparent;
+                            }
+                        }
+                    }
+                    button{
+                        background: $bs-head-txt;
+                        color: #fff;
+                        border-color: transparent;
+                        text-transform: capitalize;
+                        border-radius: 4px;
+                         font-size: 16px;
+                         border: 1px solid transparent;
+                        padding: 10px 16px;
+                        transition: all 250ms ease-in-out;
+                        &:hover{
+                            background-color: white;
+                           color: #5A7093;
+                            border: 1px solid #d0dae9;
+                        }
+                    }
+                }
+            }
+
+            .mobile{
+                display: none;
+                @include media("<=tablet"){
+                    display: block;
+                }
+            }
+        }
+    }
+}

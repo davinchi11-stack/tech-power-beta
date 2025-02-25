@@ -1,0 +1,84 @@
+
+.home-enroll{
+    background: #026BE5;
+
+    &_main{
+        @include flex(space-between, null, null, 2rem);
+
+        @include media("<tablet"){
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .left{
+            width: 50%;
+            @include media("<tablet"){
+                width: 100%;
+            }
+    
+           .vid{
+            width: 80%;
+            height: fluid(350, 500);
+            @include media("<tablet"){
+                width: 100%;
+            }
+    
+            video{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+           }
+        }
+    
+        .right{
+            width: 50%;
+            @include flex_col(1.5rem);
+            @include media("<tablet"){
+                width: 100%;
+                align-items: center;
+            }
+    
+    
+    
+            h2{
+                font-size: fluid(24, 33);
+                color:#F7F7F7;
+                font-weight: 600;
+                width: 70%;
+                line-height: fluid(30, 39);
+                @include media("<tablet"){
+                    width: 100%;
+                }
+        
+            }
+    
+            p{
+                font-size: fluid(17,18);
+                color: $bs-white;
+                width: 80%;
+                @include media("<tablet"){
+                    width: 100%;
+                }
+        
+            }
+    
+         
+             .btn{
+                .enroll{
+                    text-transform: capitalize;
+                    transition: all 250ms ease-in-out;
+                    font-size: 18px;
+                    background-color: $bs-head-txt;
+                
+                }
+             }
+    
+        }
+    }
+
+   
+}
+

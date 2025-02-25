@@ -1,0 +1,52 @@
+.tech-power{
+  position: relative;
+}
+
+
+.btn{
+                
+  button{
+      background: #1363DF;
+      color: #fff;
+      @include flex(center , center , null ,0.5rem);
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      font-family: $font_two;
+      padding: 11px 23px;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: all 250ms ease-in-out;
+      span{
+          display: inline-block;
+          svg{
+              position: relative;
+              top: 1.5px ;
+              height: 13px;
+          }
+      }
+
+      &:hover {
+        background-color: $bs-head-txt;
+        transform: translateY(-3px);
+        transition: all 250ms ease-in-out;
+      }
+    
+  }
+}
+
+
+
+@import "header.scss";
+@import "home-intro.scss";
+@import "home-info.scss";
+@import "home-enroll.scss";
+@import "apply.scss";
+@import "home-maq.scss";
+@import "home-courses.scss";
+@import "home-result.scss";
+@import "./help.scss";
+@import "footer.scss" ;
+@import "about.scss";
+@import "sponsor.scss";
+@import "scholar.scss";
+@import "Contact.scss";

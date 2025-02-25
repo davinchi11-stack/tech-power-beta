@@ -1,0 +1,248 @@
+
+// .home-info{
+//     background-color: white;
+//     // padding: unset;
+//     padding: 5rem 0;
+//     text-align: center;
+//     // padding: 50px 20px;
+//     background: #f8f9fa;
+//     // &_main{
+//     //     position: relative;
+//     //     @include flex(space-between , center , null, 3rem);
+
+//     //     @include media("<=tablet"){
+//     //         flex-direction: column-reverse;
+//     //     }
+//     //     .left{
+//     //         width: 40%;
+//     //         @include media("<=tablet"){
+//     //             width: 100%;
+//     //         }
+//     //         .img{
+//     //            border-radius: 5px;
+//     //            margin: 0 auto;
+//     //            height: fluid(400, 500);
+//     //             img{
+//     //                 height: 100%;
+//     //                 width: 100%;
+//     //                 object-fit: cover;
+//     //                 border-radius: inherit;
+//     //             }
+//     //         }
+//     //     }
+
+//     //     .right{
+//     //         width: 50%;
+//     //         @include media("<=tablet"){
+//     //             width: 100%;
+//     //         }
+
+//     //         &_main{
+//     //             @include flex_col(2rem);
+                
+
+//     //             .txt{
+//     //                 @include flex_col(1rem); 
+//     //                 h1{
+//     //                     color : $bs-head-txt;
+//     //                     font-size: fluid(23,35);
+//     //                     line-height: fluid(33, 45);
+//     //                     text-transform: capitalize;
+//     //                     span{
+//     //                         color: $bs-head-hover;
+//     //                     }
+//     //                     @include media("<phone"){
+//     //                        br{
+//     //                         display: none;
+//     //                        }
+//     //                     }
+                       
+//     //                 }
+//     //                 p{
+//     //                     font-size: fluid(14,16px) ;
+//     //                     color: $bs-p-color;
+//     //                 }
+//     //             }
+
+//     //             .lesson{
+//     //             @include flex_col(3rem);
+            
+
+//     //             .card-area{
+//     //                 @include flex(space-between, center , null , null);
+//     //                 @include media("<phone"){
+//     //                     flex-direction: column;
+//     //                     align-items: start;
+//     //                     gap: 3rem;
+//     //                 }
+
+//     //                 .card{
+//     //                     @include flex(null, center, null, 1rem);
+                        
+//     //                     width: 220px;
+//     //                     text-transform: capitalize;
+                       
+
+//     //                     .text{
+                           
+//     //                         span{
+//     //                             display: block;
+//     //                             font-size: 18px;
+//     //                             font-weight: 600;
+//     //                             font-family: $font_two;
+//     //                         }
+//     //                     }
+
+
+//     //                 }
+//     //             }
+//     //             }
+//     //         }
+
+
+//     //     }
+
+
+//     // }
+
+//     &_main{
+
+      
+           
+          
+//             h2 {
+//               font-size: 2rem;
+//               margin-bottom: 20px;
+//               color: #222;
+//             }
+          
+//             .features {
+//               display: grid;
+//               grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+//               gap: 20px;
+//               max-width: 1000px;
+//               margin: 0 auto;
+//             }
+          
+//             .card {
+//               background: white;
+//               padding: 20px;
+//               border-radius: 10px;
+//               box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+//               transition: transform 0.3s ease, box-shadow 0.3s ease;
+//               text-align: center;
+//               position: relative;
+          
+//               &:hover {
+//                 transform: translateY(-5px);
+//                 box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+//               }
+          
+//               .icon {
+//                 font-size: 2rem;
+//                 display: block;
+//                 margin-bottom: 10px;
+//               }
+          
+//               h3 {
+//                 font-size: 1.2rem;
+//                 color: #333;
+//                 margin-bottom: 10px;
+//               }
+          
+//               p {
+//                 font-size: 1rem;
+//                 color: #666;
+//                 line-height: 1.5;
+//               }
+          
+//               .image {
+//                 width: 80px;
+//                 height: 80px;
+//                 margin-top: 15px;
+//               }
+            
+//           }
+          
+//     }
+
+// }
+
+$primary-color: #2b6cb0;
+
+$text-color: #333;
+
+
+.home-info {
+  text-align: center;
+ padding: 5rem 0;
+//   background: $secondary-color;
+
+  &_main{
+    @include flex_col(3rem);
+    .heading {
+        font-size: fluid(23, 40);
+        color: $bs-head-hover;
+        font-weight: 600;
+        span {
+          color: $bs-head-txt;
+        }
+      }
+    
+      .features {
+        display: grid;
+        justify-self: center;
+        grid-template-columns: repeat(3 , 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        @include media("<=tablet"){
+            grid-template-columns: repeat(2 , 1fr);
+        }
+
+        @include media("<=phone"){
+            grid-template-columns: repeat(1, 1fr);
+        }
+    
+        .card {
+          background: $card-bg;
+          padding: 25px;
+          border-radius: 12px;
+          box-shadow: $shadow;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          @include flex_col(1rem);
+          align-items: center;
+    
+          &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          }
+    
+          .icon {
+            width: 80px;
+            height: 80px;
+            transition: transform 0.3s ease;
+    
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+    
+          h3 {
+            font-size: 1.4rem;
+            color: $bs-head-hover;
+          }
+    
+          p {
+            font-size: 1rem;
+            color: $text-color;
+            line-height: 1.6;
+          }
+        }
+      }
+  }
+}
+

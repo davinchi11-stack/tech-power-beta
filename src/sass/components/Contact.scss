@@ -1,0 +1,261 @@
+.contact{
+    @include flex_col(2rem);
+    @include media("<phone"){
+        gap: 1rem;
+    }
+    .txt{
+        text-align: center;
+        h1{
+            color: $bs-head-txt;
+            font-size: fluid(40, 70);
+            font-weight: 600;
+            span{
+                color: $bs-orange;
+            }
+        }
+     }
+
+    &_main{
+         @include flex(space-between , center, null, 3rem);
+         height: 100vh;
+         display: flex;
+         
+         
+         @include media("<tablet"){
+            flex-direction: column;
+            height: unset;
+            min-height: 80vh;
+            padding: 20px 0;
+            justify-content: center;
+            align-items: center;
+         }
+         
+      
+
+        
+        .one{
+            width: 50%;
+            position: relative; 
+            height: 100%;
+             @include flex_col(1rem);
+            //    justify-content: center;
+            @include media("<tablet"){
+                width: 90%;  
+                margin: 0 auto;
+                gap: 0.5rem;
+             }
+            .img{
+                height: fluid(300, 400);
+                margin: 0 auto;
+                width: 90%;
+
+                @include media(">phone", "<=tablet") {
+                   height: 450px;
+                }
+                
+               
+                img{
+                    height: 100%;
+                    width: 70%;
+                    object-fit: cover;
+                    object-position: center;
+                    
+                    @include media("<tablet"){
+                        width: 100%;
+                     }
+                }
+            }
+
+          .contac-info{
+            @include flex_col(2rem);
+            padding-left: 28px;
+            width: 100%;
+            @include media(">phone", "<=tablet") {
+                padding-top: 20px;
+             }
+            .lag{
+                border-bottom: 1px solid $bs-orange;
+                width: 60%;
+                padding-bottom: 20px;
+                font-size: 30px;
+                color: $bs-head-txt;
+
+                @include media("<=tablet"){
+                    width: 80%;
+                }
+
+                @include media("<=phone"){
+                    width: 90%;
+                }
+            }
+
+            .ct-main{
+               @include flex_col(2rem);
+
+               .ct{
+                @include flex(null, null, null, 0.8rem);
+                width: 80%;
+                span{
+                    display: inline-block;
+                    svg{
+                        fill: $bs-orange;
+                    }
+                }
+                h2{
+                    color: $bs-head-txt;
+                    font-size: fluid(16,18);
+                }
+               }
+            }
+          }
+            
+
+        }
+        .two{
+           width: 50%;
+           @include media("<=tablet"){
+            width: 80%;  
+            margin:  0 auto;
+            
+         }
+          
+          
+            .form{
+                
+                @include media("<=tablet"){
+                    width: 100%;     
+                    
+                 }
+                form{
+                    @include flex_col(2rem);
+                   
+
+                    .input{
+                        @include flex_col(0.5rem);
+
+                        h1{
+                            font-size: 15px;
+                            color: $bs-head-hover;
+                            position: relative;
+                            left: 10px;
+                        }
+                        input , select , textarea{
+                            width: 80%;
+                            font-family: $font;
+                            font-size: 14px;
+                            padding: 15px 15px;
+                            outline: 0;
+                            border-radius: 12px;
+                            border: 1px solid #ebebeb;
+                            box-shadow: 0px 4px 10px #00000031;
+                            &:focus{
+                                outline: 1px solid $bs-head-hover;
+                               
+                            }
+                            &::placeholder{
+                                font-size: 14px;
+                                
+                            }
+                            @include media("<=tablet"){
+                                width: 100%;
+                             }
+                             @include media("<=phone-medium"){
+                                width: 100%;
+                     
+                             }
+                        }
+
+                        textarea{
+                            height: 150px;
+                            resize: none;
+                        }
+
+                         select {
+                        
+                            transition: all 0.3s ease;
+                          
+                            &:focus {
+                              border-color: $bs-head-hover;
+                              outline: none;
+                            }
+                          
+                            &:hover {
+                              border-color: $bs-head-hover;
+                            }
+                          
+                            option {
+                              padding: 10px;
+                            }
+                          }
+
+                         button ,  input[type="submit"]{
+                            width: 80%;
+                            @include media("<=tablet"){
+                                width: 100%;
+                             }
+                             @include media("<=phone-medium"){
+                                width: 100%;
+                     
+                             }
+                            color: #fff;
+                            font-size: 17px;
+                            cursor: pointer;
+                            border-radius: 6px;
+                            padding: 12px ;
+                           box-shadow: 0 15px 40px rgba(0, 0, 0, 0.158);
+                            border: none;
+                          
+                            position: relative;
+                            font-weight: 600;
+                            overflow: hidden;
+                            background: $bs-head-hover;
+                         
+                            &:hover{
+                          
+                                background: $bs-head-txt;
+                                transition: all 250ms ease-in-out;
+                            }
+                
+                          }
+
+                          input[type="submit"]:disabled {
+                            cursor: not-allowed;
+                            opacity: 0.7; 
+                          }
+
+
+                          .custom-phone-input {
+                            
+                              position: relative;
+                            .react-international-phone-input {
+                                position: relative;
+                                font-family: $font;
+                                font-size: 14px;
+                                padding: 23px 15px 23px 55px;
+                                outline: 0;
+                                border-radius: 12px;
+                                border: 1px solid #ebebeb;
+                                box-shadow: 0px 4px 10px #00000031;
+                                font-size: 15px;
+                                
+                                
+                            }
+                        
+                            .react-international-phone-country-selector-button {
+                                position: absolute;
+                                z-index: 9;
+                                height: 100%;   
+                                border: none;   
+                                background-color: transparent ;
+                                padding: 14px 28px;
+                                box-shadow: none;
+                                }
+                        }
+                        
+                          
+                    }
+                }
+            }
+        }
+    }
+}
