@@ -1,8 +1,10 @@
 
 import * as React from "react"
 import { JSX } from "react/jsx-runtime"
+
 const SvgComponent = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" {...props}>
+ <div className="main-svg wrapper medium">
+      <svg className="w-40 md:w-28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" {...props}>
     <circle
       cx={40}
       cy={100}
@@ -58,5 +60,6 @@ const SvgComponent = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElem
       />
     </circle>
   </svg>
+ </div>
 )
 export default SvgComponent

@@ -1,6 +1,7 @@
+import { Helmet } from "react-helmet-async";
 import { HomeApply } from "./apply/Home-apply";
 // import { HomeCourse } from "./Home-Courses";
-import { HomeHelp } from "./Home-help";
+// import { HomeHelp } from "./Home-help";
 // import { HomeEnroll } from "./home-enroll";
 import { HomeInfo } from "./Home-Info";
 import { HomeIntro } from "./Home-intro";
@@ -11,9 +12,12 @@ import { Logos3 } from "./Marque/marque";
 import { NewHomeCourse } from "./New-Home-course/New-Home";
 
 
-export function Home () {
+export default function Home () {
     return (
         <div className="home">
+              <Helmet>
+            <title>Home - Tech Power</title>
+            </Helmet>
             <HomeIntro/>
             <HomeInfo/>
             <HomeApply/>
@@ -26,7 +30,7 @@ export function Home () {
             <HomeCourses/>
             <HomeResult/> */}
              <HomeResult/> 
-             <HomeHelp/>
+             {/* <HomeHelp/> */}
         </div>
     )
 }

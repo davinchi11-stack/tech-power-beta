@@ -9,9 +9,10 @@ import Axios from 'axios'
 import {Controller} from 'react-hook-form'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Helmet } from 'react-helmet-async';
 gsap.registerPlugin(ScrollTrigger);
 
-export function Sponsor () {
+export default function Sponsor () {
 
     const imgRef = useRef(null);
 
@@ -74,6 +75,9 @@ export function Sponsor () {
       }, []);
     return (
         <section className="sponsor">
+            <Helmet>
+            <title>Sponsor - Tech Power</title>
+            </Helmet>
             <div className="sponsor_main wrapper medium">
                 <div className="up">
                 <div className="second-info">

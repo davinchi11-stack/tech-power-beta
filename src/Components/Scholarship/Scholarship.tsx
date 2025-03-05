@@ -2,13 +2,17 @@ import girl from '../../assets/black-tech-grad (1).jpg'
 import scholar2 from '../../assets/scholar-1 (2).jpg'
 import scholar1 from '../../assets/mock.png'
 import AutoSliderEligible from '../Home/apply/eligible'
+import { Helmet } from 'react-helmet-async'
 
 
-export function Scholarship () {
+export default function Scholarship () {
 
 
     return (
         <section className="scholarship">
+              <Helmet>
+                        <title>Scholarship - Tech Power</title>
+                 </Helmet>
             <div className="scholarship_first wrapper small">
                 <div className="txt">
                 <h1 data-animation='header'>No Limits, Just Opportunities!</h1>

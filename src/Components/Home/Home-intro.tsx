@@ -1,4 +1,4 @@
-import bg from '../../assets/banner_bg.jpg'
+// import bg from '../../assets/banner_bg.jpg'
 import triangle from '../../assets/bshape_05.png';
 import book from '../../assets/bshape_03.png'
 import { GraduationCap, UsersThree } from '@phosphor-icons/react';
@@ -8,12 +8,23 @@ import { ArrowRight } from "lucide-react"
 
 
 
+
 export function HomeIntro () {
 
 
     
     return (
-        <section style={{backgroundImage: `url(${bg})`}} className="home-intro">
+        <section className="home-intro">
+            <div className="bg">
+                 <img 
+                      src="https://ik.imagekit.io/llti1cebs/techpower/banner_bg.jpg?tr=w-1200,q-80,format=webp"
+                      alt="TechPower Banner"
+                      width="1200"
+                      height="600"
+                      loading="lazy"
+                      decoding="async"
+                  />
+            </div>
             <div className="home-intro_main wrapper medium">
                 <div className="left">
                     <div className="txt">

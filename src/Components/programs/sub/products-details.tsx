@@ -45,8 +45,8 @@ export default function Detail() {
     
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {/* Product Image - Single image only */}
-          <div className="rounded-lg overflow-hidden border">
-           <img src={data.img}  alt={data.name} />
+          <div className="rounded-lg overflow-hidden border h-[400px] " >
+           <img className=" w-full object-cover h-full " src={data.img}  alt={data.name} />
           </div>
     
           <div className="space-y-6">

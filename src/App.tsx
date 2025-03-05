@@ -1,17 +1,26 @@
 import {createBrowserRouter , createRoutesFromElements , Route, RouterProvider} from 'react-router-dom' ;
-import { Index } from './index';
-import { TechContextContaineer } from './techContext/TextContext';
-import { Home } from './Components/Home/Home';
-import { About } from './Components/About/About';
-import { Sponsor } from './Components/Sponsor/Sponsor';
-import { Scholarship } from './Components/Scholarship/Scholarship';
-import { Contact } from './Components/Contact/Contact';
-import SmoothScroll from './snothScroll/Smothscroll';
-import { QueryContainer } from './Query/QueryContainer';
-import { ErrorPage } from './Components/404/404';
-import Programs from './Components/programs/programs';
-import ProgramsIndex from './Components/programs/programsIndex';
-import ProgramsDetails from './Components/programs/programsDeatails';
+
+import { lazy, Suspense } from "react";
+import { Index } from "./index";
+import { TechContextContaineer } from "./techContext/TextContext";
+import SmoothScroll from "./snothScroll/Smothscroll";
+import { QueryContainer } from "./Query/QueryContainer";
+import SvgComponent from './Components/programs/svg';
+import PrivacyPolicy from './use/privacy';
+import TermsOfUse from './use/terms';
+import TechPowerSchema from './techPowerSchema';
+import { HelmetProvider } from "react-helmet-async";
+
+// Lazy load components
+const Home = lazy(() => import("./Components/Home/Home"));
+const About = lazy(() => import("./Components/About/About"));
+const Sponsor = lazy(() => import("./Components/Sponsor/Sponsor"));
+const Scholarship = lazy(() => import("./Components/Scholarship/Scholarship"));
+const Contact = lazy(() => import("./Components/Contact/Contact"));
+const ErrorPage = lazy(() => import("./Components/404/404"));
+const Programs = lazy(() => import("./Components/programs/programs"));
+const ProgramsIndex = lazy(() => import("./Components/programs/programsIndex"));
+const ProgramsDetails = lazy(() => import("./Components/programs/programsDeatails"));
 
 
 function App() {
@@ -20,15 +29,45 @@ function App() {
         createRoutesFromElements(
           <>
           <Route path='/' element={<Index/>}>
-           <Route index  element={<Home/>}/>
-           <Route path='about-us' element={<About/>} />
-           <Route path='sponsor' element={<Sponsor/>} />
-           <Route path='scholarship' element={<Scholarship/>} />
-           <Route path='contact' element={<Contact/>} />
-           <Route path='programs' element={<ProgramsIndex/>} >
-             <Route index element={<Programs/>}/>
+           <Route index  element={
+            <Suspense fallback={<SvgComponent/>}> 
+                <Home/>
+            </Suspense>
+            }/>
+           <Route path='about-us' element={
+             <Suspense fallback={<SvgComponent/>}> 
+               <About/>
+           </Suspense>
+            } />
+           <Route path='sponsor' element={
+             <Suspense fallback={<SvgComponent/>}> 
+                <Sponsor/>
+           </Suspense>
+          } />
+           <Route path='scholarship' element={
+              <Suspense fallback={<SvgComponent/>}> 
+                 <Scholarship/>
+             </Suspense>
+            } />
+           <Route path='contact' element={
+              <Suspense fallback={<SvgComponent/>}> 
+                <Contact/>
+            </Suspense>
+           } />
+           <Route path='programs' element={
+              <Suspense fallback={<SvgComponent/>}> 
+                <ProgramsIndex/>
+               </Suspense>
+            } >
+             <Route index element={
+              <Suspense fallback={<SvgComponent/>}>
+                  <Programs/>
+              </Suspense>
+              }/>
              <Route path='/programs/details/:id' element={<ProgramsDetails/>}/>
            </Route>
+           <Route path='privacy-policy' element={<PrivacyPolicy/>}/>
+           <Route path='terms-of-use' element={<TermsOfUse/>}/>
           </Route>
           <Route path='*' element={<ErrorPage/>} />
           </>
@@ -39,7 +78,10 @@ function App() {
     <QueryContainer> 
     <TechContextContaineer>
       <SmoothScroll> 
+      <HelmetProvider> 
+       <TechPowerSchema/>
      <RouterProvider router={router}/>
+     </HelmetProvider>
      </SmoothScroll>
      </TechContextContaineer>
      </QueryContainer>

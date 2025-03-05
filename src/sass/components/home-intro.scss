@@ -1,11 +1,21 @@
 
 .home-intro{
     min-height: 80vh;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-repeat: no-repeat;
+    // background-size: cover;
     position: relative;
     padding: unset;
     padding-top: 5rem;
+    overflow: hidden;
+
+    .bg{
+      img{
+        position: absolute;
+        min-height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
     @include media("<tablet"){
         padding-top: 8rem;
     }

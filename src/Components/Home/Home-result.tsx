@@ -1,6 +1,6 @@
 import { CaretDown, CaretUp } from '@phosphor-icons/react'
 import { useState } from 'react'
-import tpMan from '../../assets/ct-three.jpg'
+// import tpMan from '../../assets/ct-three.jpg'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '../ui/button'
 
@@ -18,11 +18,11 @@ export function HomeResult () {
     })
     
     return (
-        <section className="home-result">
+        <section className="home-result"> 
             <div className="home-result_main wrapper small">
                    <div className="left-side">
                    <div className="img">
-                   <img src={tpMan} alt="man with laptop" />
+                   <img src="https://ik.imagekit.io/llti1cebs/techpower/ct-three.jpg?tr=q-50" alt="man with laptop" />
                    </div>
                    </div>
                    <div className="right-side">

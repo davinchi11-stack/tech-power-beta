@@ -174,7 +174,7 @@ export function Header () {
                          </div>
                        </div>
                        <div className="mobile">
-                    <Hamburger toggled={isOpen} size={28}  color="#0d6efd" toggle={setOpen} />
+                    <Hamburger toggled={isOpen} size={28}  color="#0d6efd" toggle={setOpen}  aria-label="Toggle navigation menu"/>
                     </div>
                     </div>
                     

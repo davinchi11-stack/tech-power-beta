@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
 import { Header } from "../Components/Header"
-import { Footer } from "../Components/Footer"
+import { Footer } from "../footer/Footer"
 import { useEffect } from "react"
 import {useLocation } from "react-router-dom"
 import { useLocated } from "../Hooks/useLoc"

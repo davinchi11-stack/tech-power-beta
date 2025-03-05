@@ -7,8 +7,9 @@ import { useFormSchema } from '../../Hooks/useFormContact';
 import Axios from 'axios';
 import { useMutation } from '@tanstack/react-query';
 import {Controller} from 'react-hook-form'
+import { Helmet } from 'react-helmet-async';
 
-export function Contact() {
+export default function Contact() {
     const [phone, setPhone] = useState("");
 
     const { error, setError, handleSubmit, register, reset, control } = useFormSchema();
@@ -43,6 +44,9 @@ export function Contact() {
         
     return (
       <section className="contact">
+          <Helmet>
+                <title>Contact - Tech Power</title>
+            </Helmet>
         <div className="txt">
             <h1>Contact <span>Us</span></h1>
         </div>

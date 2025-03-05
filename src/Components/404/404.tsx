@@ -1,7 +1,7 @@
 import "./404.scss"
 import {useNavigate} from 'react-router-dom'
 
-export function ErrorPage ()  {
+export default function ErrorPage ()  {
   const naviagate = useNavigate()
     return (
         <div className="error-main">

@@ -22,6 +22,12 @@ export const useLocated = () => {
             window.scrollTo(0, 0);
         }else if (pathname === '/programs'){
           window.scrollTo(0, 0);
+         }else if (pathname === '/privacy-policy'){
+          window.scrollTo(0, 0);
+         }else if (pathname === '/privacy-policy'){
+          window.scrollTo(0, 0);
+         }else if (pathname.startsWith('/programs/details/')){
+          window.scrollTo(0, 0);
          }
       }
 

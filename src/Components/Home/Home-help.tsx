@@ -19,10 +19,10 @@ export function HomeHelp () {
                             <div className="middle">
                                 <p data-animation='para'>Are you indecisive about what course to choose? Would you like to talk to a Tech expert over any tech related issue? We have professionals in place who are ready and willing to be of help.</p>
                             </div>
-                            <Button variant={'secondary'} className='btn-main bg-red-500 text-white p-6 w-40 ' 
+                            <Button aria-label="Get Help" variant={'secondary'} className='btn-main bg-red-500 text-white p-6 w-40 ' 
                                onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank")}
                             > Get Help
-                             <ArrowRight />
+                             <ArrowRight  aria-hidden="true"  />
                             </Button>
                         </div>
                     </div>

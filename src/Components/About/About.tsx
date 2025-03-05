@@ -4,11 +4,12 @@ import { useState } from 'react'
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Helmet } from 'react-helmet-async';
 
 gsap.registerPlugin(ScrollTrigger);
 
 
-export function About () {
+export default function About () {
   const imgRef = useRef(null);
     const [drop , setDrop] = useState({
         one : true,
@@ -36,6 +37,9 @@ export function About () {
   
     return (
         <section className="about">
+            <Helmet>
+                  <title>About - Tech Power</title>
+               </Helmet>
               <div className="about_main wrapper medium">
                   <div className="info">
                     <div className="left-info">
