@@ -20,15 +20,9 @@ export const useLocated = () => {
             window.scrollTo(0, 0);
         }else if (pathname === '/contact'){
             window.scrollTo(0, 0);
-        //   }else if (pathname === '/tech'){
-        //     window.scrollTo(0, 0);
-        //   }else if (pathname === '/contact'){
-        //     window.scrollTo(0, 0);
-        //   }
-        }
-        
-    
-        
+        }else if (pathname === '/programs'){
+          window.scrollTo(0, 0);
+         }
       }
 
 

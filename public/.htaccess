@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Do not rewrite requests for actual files like .js, .css, images, etc.
+  RewriteCond %{REQUEST_URI} !\.(?:js|css|json|png|jpg|jpeg|gif|ico|svg|woff2|woff|ttf|eot|otf)$ [NC]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Ensure JavaScript files are served correctly
+AddType application/javascript .js
