@@ -9,6 +9,9 @@ import { Contact } from './Components/Contact/Contact';
 import SmoothScroll from './snothScroll/Smothscroll';
 import { QueryContainer } from './Query/QueryContainer';
 import { ErrorPage } from './Components/404/404';
+import Programs from './Components/programs/programs';
+import ProgramsIndex from './Components/programs/programsIndex';
+import ProgramsDetails from './Components/programs/programsDeatails';
 
 
 function App() {
@@ -22,6 +25,10 @@ function App() {
            <Route path='sponsor' element={<Sponsor/>} />
            <Route path='scholarship' element={<Scholarship/>} />
            <Route path='contact' element={<Contact/>} />
+           <Route path='programs' element={<ProgramsIndex/>} >
+             <Route index element={<Programs/>}/>
+             <Route path='/programs/details/:id' element={<ProgramsDetails/>}/>
+           </Route>
           </Route>
           <Route path='*' element={<ErrorPage/>} />
           </>

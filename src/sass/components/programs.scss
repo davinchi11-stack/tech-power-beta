@@ -1,0 +1,34 @@
+
+
+.programs{
+    &_main{
+        
+        .txt{
+            color: $bs-head-txt;
+        }
+
+        button{
+            background: $bs-head-txt;
+            color: #fff;
+        }
+
+
+        .dialog{
+            display: none;
+        }
+
+
+       
+     .loding{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg{
+            width: 130px;
+        }
+     }
+        
+
+        
+    }
+}

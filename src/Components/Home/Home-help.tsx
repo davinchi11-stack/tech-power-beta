@@ -1,6 +1,11 @@
+import { ArrowRight } from 'lucide-react'
 import tp from '../../assets/_freepicdownloader.com_-young-student-higschool-portrait-by-png-template-normal-removebg-preview.png'
+import { Button } from '../ui/button'
 
 export function HomeHelp () {
+    const whatsappNumber = "+2349068941858"; 
+    const message = encodeURIComponent("Hello, I need assistance!");
+
     return (
         <section className="help">
             <div className="help_main wrapper small">
@@ -14,9 +19,11 @@ export function HomeHelp () {
                             <div className="middle">
                                 <p data-animation='para'>Are you indecisive about what course to choose? Would you like to talk to a Tech expert over any tech related issue? We have professionals in place who are ready and willing to be of help.</p>
                             </div>
-                            <div className="btn">
-                                <button >Get Help</button>
-                            </div>
+                            <Button variant={'secondary'} className='btn-main bg-red-500 text-white p-6 w-40 ' 
+                               onClick={() => window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank")}
+                            > Get Help
+                             <ArrowRight />
+                            </Button>
                         </div>
                     </div>
                     <div className="second">

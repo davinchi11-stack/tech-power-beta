@@ -21,7 +21,7 @@ export function About () {
 
     useEffect(() => {
       gsap.to(imgRef.current, {
-        scale: 1.5, 
+        scale: 1.05, 
         duration: 1,
         ease: "power1.out",
         scrollTrigger: {

@@ -5,6 +5,7 @@ import { useEffect } from "react"
 import {useLocation } from "react-router-dom"
 import { useLocated } from "../Hooks/useLoc"
 import { scrollAnimate } from "../animation/animation"
+import WhatsAppButton from "@/Components/whatsapp"
 
 export function Index () {
     const { pathname } = useLocation();
@@ -28,6 +29,7 @@ export function Index () {
     return (
         <div className="tech-power">
              <Header/>
+             <WhatsAppButton/>
             <main className="main">
                 <Outlet/>
             </main>

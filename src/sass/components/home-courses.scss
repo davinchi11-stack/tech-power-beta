@@ -1,125 +1,138 @@
 
 
 
-.home-course{
-    position: relative;
-     padding: 6rem 0;
-     @include media("<=tablet"){
-      padding: 4rem 0
-    }
+// .home-course{
+//     position: relative;
+//      padding: 6rem 0;
+//      @include media("<=tablet"){
+//       padding: 4rem 0
+//     }
     
-    &_main{
-      @include flex(space-between , null, null, 2rem);
+//     &_main{
+//       @include flex(space-between , null, null, 2rem);
 
-      @include media("<=tablet"){
-        flex-direction: column;
-      }
+//       @include media("<=tablet"){
+//         flex-direction: column;
+//       }
   
-      .left{
-        width: 50%;
-        @include flex_col(1.5rem);
+//       .left{
+//         width: 50%;
+//         @include flex_col(1.5rem);
         
-        @include media("<=tablet"){
-          width: 100%;
-          align-items: center;
-          text-align: center;
-        }
+//         @include media("<=tablet"){
+//           width: 100%;
+//           align-items: center;
+//           text-align: center;
+//         }
     
 
-        h2{
-          font-size: 28px;
-          font-size: 600;
-          color:  $bs-head-txt;
-        }
-        p{
-          width: 80%;
-          font-size: 18px;
-          @include media("<=tablet"){
-            width: 70%;
-            margin: 0 auto;
-          }
-          @include media("<=phone"){
-            width: 100%;
-          }
+//         h2{
+//           font-size: 28px;
+//           font-size: 600;
+//           color:  $bs-head-txt;
+//         }
+//         p{
+//           width: 80%;
+//           font-size: 18px;
+//           @include media("<=tablet"){
+//             width: 70%;
+//             margin: 0 auto;
+//           }
+//           @include media("<=phone"){
+//             width: 100%;
+//           }
       
 
-        }
-       }
+//         }
+//        }
 
-       .right{
-        width: 50%;
-         display:  flex;
-         justify-content: center;
-         @include media("<=tablet"){
-          width: 100%;
-        }
+//        .right{
+//         width: 50%;
+//          display:  flex;
+//          justify-content: center;
+//          @include media("<=tablet"){
+//           width: 100%;
+//         }
     
-        .course-card{
-          @include flex_col(1.5rem);
-          width: fluid(350, 450);
-          border-radius: 25px;
-          padding: 40px;
-          background: #fff;
-          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+//         .course-card{
+//           @include flex_col(1.5rem);
+//           width: fluid(350, 450);
+//           border-radius: 25px;
+//           padding: 40px;
+//           background: #fff;
+//           box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
     
           
-          .course-details{
+//           .course-details{
           
-            @include flex_col(1.5rem);
-            border-radius: 5px;
-            h3{
-              font-size: 20px;
-              line-height: 25px;
-              color: $bs-head-txt;
-            }
-            p{
-              font-size: 16px;
-            }
-          }
-          .course-info{
-            @include flex_col(1rem);
-            flex-direction: row;
-             justify-content: space-between;
+//             @include flex_col(1.5rem);
+//             border-radius: 5px;
+//             h3{
+//               font-size: 20px;
+//               line-height: 25px;
+//               color: $bs-head-txt;
+//             }
+//             p{
+//               font-size: 16px;
+//             }
+//           }
+//           .course-info{
+//             @include flex_col(1rem);
+//             flex-direction: row;
+//              justify-content: space-between;
              
-            .evn{
-              @include flex_col(0.2rem);
-              align-items: center;
-              .icon{
-                svg{
-                  fill: $bs-head-hover;
-                }
-              }
-              .txt{
-                font-size: fluid(12,14);
-                color: $bs-head-txt;
-              }
-            }
-          }
+//             .evn{
+//               @include flex_col(0.2rem);
+//               align-items: center;
+//               .icon{
+//                 svg{
+//                   fill: $bs-head-hover;
+//                 }
+//               }
+//               .txt{
+//                 font-size: fluid(12,14);
+//                 color: $bs-head-txt;
+//               }
+//             }
+//           }
 
-          .btn-enroll{
-            @include flex(space-between, center, null, null);
-            padding-top: 30px;
-            font-size: 15px;
+//           .btn-enroll{
+//             @include flex(space-between, center, null, null);
+//             padding-top: 30px;
+//             font-size: 15px;
 
-            .btn-en{
-              button{
-                text-transform: capitalize;
-                font-size: 15px;
-                padding: 8px 20px;
-                transition: all  250ms ease-in-out;
-              }
-            }
-            .navigation-buttons{
-              &:hover{
-                color: $bs-head-txt;
-                transition: all  250ms ease-in-out;
-              }
-            }
-          }
-         }
-       }
+//             .btn-en{
+//               button{
+//                 text-transform: capitalize;
+//                 font-size: 15px;
+//                 padding: 8px 20px;
+//                 transition: all  250ms ease-in-out;
+//               }
+//             }
+//             .navigation-buttons{
+//               &:hover{
+//                 color: $bs-head-txt;
+//                 transition: all  250ms ease-in-out;
+//               }
+//             }
+//           }
+//          }
+//        }
 
      
       
-    }
+//     }
+// }
+
+.new-course{
+
+  &_main{
+     h2{
+      color: $bs-head-txt;
+     }
+
+     button{
+      color: $bs-head-txt;
+     }
+  }
 }

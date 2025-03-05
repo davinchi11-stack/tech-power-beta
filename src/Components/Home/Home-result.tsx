@@ -1,6 +1,8 @@
 import { CaretDown, CaretUp } from '@phosphor-icons/react'
 import { useState } from 'react'
 import tpMan from '../../assets/ct-three.jpg'
+import { ArrowRight } from 'lucide-react'
+import { Button } from '../ui/button'
 
 
 export function HomeResult () {
@@ -198,30 +200,10 @@ export function HomeResult () {
                             </div> }
                          </div>
                        </div>
-                    <div className="btn">
-                        <button>Register Now
-                             <span>
-                             <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 14 13"
-                            
-                            >
-                                <path
-                                stroke="#fff"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M12.625 6.812H1m11.625 0L7.78 1.97m4.844 4.843L7.78 11.656"
-                                style={{
-                                    strokeDasharray: "26,28",
-                                    strokeDashoffset: 0,
-                                }}
-                                />
-                            </svg>
-                           </span>
-                            </button>
-                    </div> 
+                       
+                       <Button variant={'secondary'} className='btn-main bg-red-500 text-white p-6 w-50 ' >Register Now
+                    <ArrowRight />
+                            </Button>
                    </div>
             </div>
         </section>

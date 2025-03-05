@@ -1,9 +1,10 @@
 import bg from '../../assets/banner_bg.jpg'
-import  girl from '../../assets/slazzer-edit-image (5).webp'
 import triangle from '../../assets/bshape_05.png';
 import book from '../../assets/bshape_03.png'
 import { GraduationCap, UsersThree } from '@phosphor-icons/react';
 import earth from '../../assets/bshape_01.png'
+import { Button } from '../ui/button';
+import { ArrowRight } from "lucide-react"
 
 
 
@@ -17,7 +18,7 @@ export function HomeIntro () {
                 <div className="left">
                     <div className="txt">
                          <div className="inner">
-                         <h1 data-animation="scale-para">
+                         <h1 className='bg-red' data-animation="scale-para">
                          Learn a tech <span className='skill'>
                             Skill!
                             <br />
@@ -60,36 +61,18 @@ export function HomeIntro () {
                         </p>
                     </div>
                     <div className="btn">
-                        <button  data-animation='bounce'>Register Now
-                             <span>
-                             <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 14 13"
-                            
-                            >
-                                <path
-                                stroke="#fff"
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M12.625 6.812H1m11.625 0L7.78 1.97m4.844 4.843L7.78 11.656"
-                                style={{
-                                    strokeDasharray: "26,28",
-                                    strokeDashoffset: 0,
-                                }}
-                                />
-                            </svg>
-                           </span>
-                            </button>
+                       
                     </div> 
+                    <Button variant={'secondary'} className='btn-main bg-red-500 text-white p-6 w-50 ' data-animation='bounce'>Register Now
+                    <ArrowRight />
+                            </Button>
                     <div className="bounnce">
                         <img data-animation='bounce' src={earth} alt="bounce-erath" />
                     </div>
                 </div>
                 <div className="right">
                     <div className="img">
-                        <img src={girl} alt="student" />
+                        <img src="https://ik.imagekit.io/llti1cebs/techpower/slazzer-edit-image%20(5).webp?tr=w-1000" alt="student" />
                     </div>
                       <div className="first icon">
                             <img data-animation='bounce' src={triangle} alt="triangle" />

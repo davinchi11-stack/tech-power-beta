@@ -6,7 +6,7 @@
 .btn{
                 
   button{
-      background: #1363DF;
+      
       color: #fff;
       @include flex(center , center , null ,0.5rem);
       text-transform: uppercase;
@@ -34,6 +34,10 @@
   }
 }
 
+.btn-main{
+  background: #1363DF;
+}
+
 
 
 @import "header.scss";
@@ -50,3 +54,4 @@
 @import "sponsor.scss";
 @import "scholar.scss";
 @import "Contact.scss";
+@import "programs.scss";

@@ -104,7 +104,9 @@ export function Header () {
                                     Internship 
                                 </li>
                                 <li className="tg">
+                                    <NavLink to={"/programs"}>
                                     Programs
+                                    </NavLink>
                                 </li>
                                 <li onMouseEnter={()=> setDropdown(true)} className="link-main">Patnerships <span><CaretDown size={18} /></span>
                                     <div className={`link-card ${dropDown && 'drop'}` }>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import contatcImg from '../../assets/call-ill.jpg'
 import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
-import { EnvelopeSimple, MapPin, PhoneOutgoing } from '@phosphor-icons/react';
+import { EnvelopeSimple, PhoneOutgoing } from '@phosphor-icons/react';
 import { useFormSchema } from '../../Hooks/useFormContact';
 import Axios from 'axios';
 import { useMutation } from '@tanstack/react-query';
@@ -54,10 +54,10 @@ export function Contact() {
              <div className="contac-info">
                   <h2 className='lag'>LAGOS NG</h2>
                  <div className="ct-main">
-                 <div className="ct">
+                 {/* <div className="ct">
                     <span><MapPin size={20} weight="fill" /></span>
                      <h2>2, Adesina elemide street, off agric road, oko oba, lagos</h2>
-                 </div>
+                 </div> */}
                  <div className="ct">
                     <span><PhoneOutgoing size={20} weight="fill" /> </span>
                      <h2><a href="tel:+2349068941858">+234 906 894 1858</a> </h2>
@@ -65,7 +65,7 @@ export function Contact() {
                  <div className="ct">
                     <span><EnvelopeSimple size={20} weight="fill" /> </span>
                      <h2> 
-                     <a href="mailto:support@techpowerinc.com">support@techpowerinc.com</a>
+                     <a href="mailto:support@techpowerinc.com">info@techpowerinc.com</a>
                      </h2>
                  </div>
                  </div>
