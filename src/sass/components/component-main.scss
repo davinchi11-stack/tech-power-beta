@@ -36,6 +36,9 @@
 
 .btn-main{
   background: #1363DF;
+   @include media("<tablet"){
+    margin:  0 auto;
+   }
 }
 
 

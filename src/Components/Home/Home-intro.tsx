@@ -60,10 +60,8 @@ export function HomeIntro () {
                          to help you begin your journey.
                         </p>
                     </div>
-                    <div className="btn">
-                       
-                    </div> 
-                    <Button variant={'secondary'} className='btn-main bg-red-500 text-white p-6 w-50 ' data-animation='bounce'>Register Now
+                  
+                    <Button variant={'secondary'} className='btn-main  bg-red-500 text-white p-6 w-50 ' data-animation='bounce'>Register Now
                     <ArrowRight />
                             </Button>
                     <div className="bounnce">
