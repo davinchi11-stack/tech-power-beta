@@ -5,10 +5,13 @@
 // 	display: none;
 // }
 
+
+
+
 html {
 	box-sizing: border-box;
-	scroll-behavior: auto
-
+	scroll-behavior: auto;
+	overflow-x: hidden;
 }
 
 

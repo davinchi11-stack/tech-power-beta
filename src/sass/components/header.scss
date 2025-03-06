@@ -35,6 +35,7 @@
         z-index: 9999;
         nav{
             @include flex(space-between , center, null , null);
+            padding: 0 20px;
 
             .left{
                 @include flex(null , center, null , 3rem);
@@ -43,7 +44,7 @@
                     position: relative;
                     z-index: 9999;
                     img{
-                        width: fluid(170, 200);
+                        width: fluid(170, 190);
                     }
                 }
 

@@ -162,10 +162,7 @@ export function Header () {
                     </div>
                     <div className="right">
                        <div className="right_sign">
-                       {/* <div className="icon">
-                         <ShoppingBag size={32} color="#082a5e"/>
-                         <span className="item">0</span>
-                         </div> */}
+                       
                           <div className="sign mn">
                             <button>Login</button>
                          </div>
