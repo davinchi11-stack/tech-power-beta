@@ -6,7 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/Components/ui/sheet"
 import { Badge } from "@/Components/ui/badge"
 // import { Slider } from "@/Components/ui/slider"
-import { Link } from "react-router-dom"
+import { Link , useNavigate } from "react-router-dom"
 import Axios from "axios"
 import { useQuery } from "@tanstack/react-query"
 import SvgComponent from "../svg"
@@ -40,15 +40,18 @@ const getAllData = () => {
 }
 
 export default function ProductListing() {
+ 
+ 
 
-
+   
     const {data , isLoading , isError} = useQuery({
         queryKey : ["course"],
         queryFn : getAllData
     })
   
-  console.log(data);
   
+
+ 
      
   
 
@@ -84,7 +87,6 @@ export default function ProductListing() {
   
   
 
-  console.log(filteredProducts);
   
 
   // Sort products based on selected option
@@ -207,6 +209,13 @@ export default function ProductListing() {
 }
 
 function ProductCard({ product }: any) {
+
+  const navigate = useNavigate()
+
+  const handleNavigate = (id: any) => {
+     navigate(`enroll-course/${id}`)
+  }
+
   return (
     <div className="group border rounded-lg overflow-hidden hover:shadow-md transition-shadow">
     
@@ -241,7 +250,7 @@ function ProductCard({ product }: any) {
         </div>
       </Link>
       <div className="p-4 pt-0">
-        <Button className="w-full">
+        <Button onClick={() => handleNavigate(product._id)} className="w-full">
           {/* <ShoppingCart className="h-4 w-4 mr-2" /> */}
            Enroll Now
         </Button>

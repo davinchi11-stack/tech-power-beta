@@ -43,6 +43,11 @@
 
 
 
+section[aria-label="Notifications alt+T"] {
+  padding: 0 !important;
+}
+
+
 @import "header.scss";
 @import "home-intro.scss";
 @import "home-info.scss";
@@ -58,3 +63,4 @@
 @import "scholar.scss";
 @import "Contact.scss";
 @import "programs.scss";
+@import "p-contact.scss" ;

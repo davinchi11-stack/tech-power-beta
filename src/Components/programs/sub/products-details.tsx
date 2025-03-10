@@ -1,5 +1,5 @@
 
-import {Link , useParams} from "react-router-dom"
+import {Link , useNavigate, useParams} from "react-router-dom"
 import { ArrowLeft } from "lucide-react"
 import { Badge } from "@/Components/ui/badge"
 import { Button } from "@/Components/ui/button"
@@ -14,6 +14,12 @@ import SvgComponent from "../svg"
 
 
 export default function Detail() {
+
+  const navigate = useNavigate()
+
+  const handleNavigate = (id: any) => {
+    navigate(`/programs/enroll-course/${id}`)
+ }
  
 
   const {id} = useParams()
@@ -40,7 +46,7 @@ export default function Detail() {
         <div className="container mx-auto px-4 py-8">
         <Link to="/programs" className="inline-flex items-center gap-2 text-sm mb-6 hover:text-primary transition-colors">
           <ArrowLeft className="h-4 w-4" />
-          Back to products
+          Back to Course
         </Link>
     
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
@@ -64,7 +70,7 @@ export default function Detail() {
             <h1 className="text font-bold">{data?.course_duration}</h1>
             </div>
             <p className="text-muted-foreground">{data?.description}</p>
-            <Button className="w-full sm:w-auto">
+            <Button onClick={()=>  handleNavigate(data?._id)} className="w-full sm:w-auto">
               Enroll Now
             </Button>
           </div>

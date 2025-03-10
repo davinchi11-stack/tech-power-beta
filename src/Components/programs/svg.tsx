@@ -4,7 +4,7 @@ import { JSX } from "react/jsx-runtime"
 
 const SvgComponent = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
  <div className="main-svg wrapper medium">
-      <svg className="w-40 md:w-28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" {...props}>
+      <svg className="md:w-20 w-28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" {...props}>
     <circle
       cx={40}
       cy={100}

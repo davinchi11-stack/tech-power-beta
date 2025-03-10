@@ -28,6 +28,8 @@ export const useLocated = () => {
           window.scrollTo(0, 0);
          }else if (pathname.startsWith('/programs/details/')){
           window.scrollTo(0, 0);
+         }else if (pathname.startsWith('/programs/enroll-course')){
+          window.scrollTo(0, 0);
          }
       }
 

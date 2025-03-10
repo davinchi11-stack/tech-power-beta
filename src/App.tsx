@@ -10,6 +10,10 @@ import PrivacyPolicy from './use/privacy';
 import TermsOfUse from './use/terms';
 import TechPowerSchema from './techPowerSchema';
 import { HelmetProvider } from "react-helmet-async";
+import { ProductContact } from './Components/programs/programs-contact';
+import { Toaster } from "@/Components/ui/sonner"
+
+
 
 // Lazy load components
 const Home = lazy(() => import("./Components/Home/Home"));
@@ -65,6 +69,7 @@ function App() {
               </Suspense>
               }/>
              <Route path='/programs/details/:id' element={<ProgramsDetails/>}/>
+             <Route path='enroll-course/:id' element={<ProductContact/>}/>
            </Route>
            <Route path='privacy-policy' element={<PrivacyPolicy/>}/>
            <Route path='terms-of-use' element={<TermsOfUse/>}/>
@@ -75,16 +80,20 @@ function App() {
   )
   
   return (
-    <QueryContainer> 
-    <TechContextContaineer>
-      <SmoothScroll> 
-      <HelmetProvider> 
-       <TechPowerSchema/>
-     <RouterProvider router={router}/>
-     </HelmetProvider>
-     </SmoothScroll>
-     </TechContextContaineer>
-     </QueryContainer>
+    
+   <>
+    <Toaster position="top-right" />
+     <QueryContainer> 
+     <TechContextContaineer>
+       <SmoothScroll> 
+       <HelmetProvider> 
+        <TechPowerSchema/>
+      <RouterProvider router={router}/>
+      </HelmetProvider>
+      </SmoothScroll>
+      </TechContextContaineer>
+      </QueryContainer>
+   </>
   )
 }
 
