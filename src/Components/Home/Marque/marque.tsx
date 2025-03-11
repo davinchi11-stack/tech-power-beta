@@ -26,49 +26,49 @@ const Logos3 = ({
     {
       id: "logo-1",
       description: "Logo 1",
-      image: "https://shadcnblocks.com/images/block/logos/astro-wordmark.svg",
+      image: "https://ik.imagekit.io/llti1cebs/techpower/Jumia-Logo-768x432.png?updatedAt=1741704839239",
       className: "h-7 w-auto",
     },
     {
       id: "logo-2",
       description: "Logo 2",
-      image: "https://cdn.brandfetch.io/idbEJ2XWew/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1718352495573",
-      className: "h-7 w-auto",
+      image: "https://www.wemabank.com/assets/wemaFull-55brX0lO.svg",
+      className: "h-28 w-auto",
     },
     {
       id: "logo-3",
       description: "Logo 3",
-      image: "https://shadcnblocks.com/images/block/logos/nextjs-wordmark.svg",
-      className: "h-7 w-auto",
+      image: "https://ik.imagekit.io/llti1cebs/techpower/to-desk-removebg-preview.png?updatedAt=1741704548792",
+      className: "h-28 w-auto",
     },
     {
       id: "logo-4",
       description: "Logo 4",
-      image: "https://shadcnblocks.com/images/block/logos/react-wordmark.svg",
+      image: "https://www.fidelitybank.ng/wp-content/uploads/2020/07/Fidelity_Bank_Plc_Main_Logo.svg",
       className: "h-7 w-auto",
     },
     {
       id: "logo-5",
       description: "Logo 5",
-      image: "https://shadcnblocks.com/images/block/logos/shadcn-ui-wordmark.svg",
+      image: "https://ik.imagekit.io/llti1cebs/techpower/omeg-2-removebg-preview.png?updatedAt=1741705203194",
       className: "h-7 w-auto",
     },
     {
       id: "logo-6",
       description: "Logo 6",
-      image: "https://shadcnblocks.com/images/block/logos/supabase-wordmark.svg",
+      image: "https://www.liviasoft.com/wp-content/uploads/2015/12/logo.png",
       className: "h-7 w-auto",
     },
     {
       id: "logo-7",
       description: "Logo 7",
-      image: "https://shadcnblocks.com/images/block/logos/tailwind-wordmark.svg",
+      image: "https://ik.imagekit.io/llti1cebs/techpower/nation-ass.png?updatedAt=1741705914856",
       className: "h-4 w-auto",
     },
     {
       id: "logo-8",
       description: "Logo 8",
-      image: "https://shadcnblocks.com/images/block/logos/vercel-wordmark.svg",
+      image: "https://ik.imagekit.io/llti1cebs/techpower/lg.png?updatedAt=1741706072198",
       className: "h-7 w-auto",
     },
   ],
@@ -98,7 +98,7 @@ const Logos3 = ({
                          
                         src={logo.image}
                         alt={logo.description}
-                        className={logo.className}
+                        className={`scroll-img`}
                       />
                       {/* <img src={logo.image} alt={logo.description} className="h-6 w-auto max-w-[100px]" /> */}
                     </div>

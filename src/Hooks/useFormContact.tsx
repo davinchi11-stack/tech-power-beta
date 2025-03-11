@@ -17,14 +17,17 @@ export const useFormSchema = () => {
          "email" : yup.string().email().required(),
          "name" : yup.string().required(),
          "message" : yup.string().required(),
-         "phone": yup.string() .required("Phone number is required").matches(/^\+\d{10,15}$/, "Invalid phone number"),
+           phone: yup.string()
+             .matches(/^\+?[0-9]{10,15}$/, "Invalid phone number format")
+             .required("Phone number is required"),
+         
  
      })
 
-     const {handleSubmit , register , reset , control} = useForm({
+     const {handleSubmit , register , reset , control , formState:{errors}} = useForm({
         resolver: yupResolver(schema)
     })
 
 
-   return {error , setError  , handleSubmit , register , reset , control}
+   return {error, errors , setError  , handleSubmit , register , reset , control}
 }

@@ -73,7 +73,7 @@ const Footer2 = ({
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <footer className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
-            <div className="md:col-span-2 lg:col-span-2">
+            <div className="md:col-span-2 lg:col-span-2 tech-logo">
               <div className="flex items-center gap-3 mb-6">
                 <Link to={logo.url} className="flex-shrink-0">
                   <img

@@ -41,6 +41,18 @@ export default function About () {
                   <title>About - Tech Power</title>
                </Helmet>
               <div className="about_main wrapper medium">
+
+                  <div className="second-info">
+                     <div className="text">
+                        <h1 data-animation='fade'> Unlock Your <span>Tech Potential</span></h1>
+                        <p data-animation='para'>Gain world-class tech skills and step into global opportunities. At TechPower, we turn passion into expertise through innovative learning and career connections.</p>
+                     </div>
+
+                     <div className="img">
+                        <img  ref={imgRef} src={grpTeam} alt="" loading='lazy'/>
+                     </div>
+                  </div>
+
                   <div className="info">
                     <div className="left-info">
                         <span data-animation='bounce' className="we">Who we are</span>
@@ -113,17 +125,6 @@ export default function About () {
                              </div>
                         </div>
                     </div>
-                  </div>
-
-                  <div className="second-info">
-                     <div className="text">
-                        <h1 data-animation='fade'> Unlock Your <span>Tech Potential</span></h1>
-                        <p data-animation='para'>Gain world-class tech skills and step into global opportunities. At TechPower, we turn passion into expertise through innovative learning and career connections.</p>
-                     </div>
-
-                     <div className="img">
-                        <img  ref={imgRef} src={grpTeam} alt="" loading='lazy'/>
-                     </div>
                   </div>
 
                   <div className="faq-info ">

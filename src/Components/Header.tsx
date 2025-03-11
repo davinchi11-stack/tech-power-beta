@@ -101,7 +101,9 @@ export function Header () {
                                     </NavLink>
                                 </li>
                                 <li className="tg">
+                                    <NavLink to={"/internship"}> 
                                     Internship 
+                                    </NavLink>
                                 </li>
                                 <li className="tg">
                                     <NavLink to={"/programs"}>
