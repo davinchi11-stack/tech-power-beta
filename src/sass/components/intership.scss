@@ -1,0 +1,27 @@
+
+
+.intership{
+    position: relative;
+
+    &_main{
+
+        .introduction{
+            padding: 0;
+
+            strong{
+                color: $bs-purple;
+            }
+
+            svg{
+                color: $bs-head-hover;
+            }
+            p{
+                color: $bs-p-color;
+            }
+
+             h2 , h3{
+                color: $bs-head-txt;
+            }
+        }
+    }
+}

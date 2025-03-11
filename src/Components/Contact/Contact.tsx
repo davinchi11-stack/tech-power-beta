@@ -1,46 +1,11 @@
-import { useState } from 'react';
+
 import contatcImg from '../../assets/call-ill.jpg'
-import { PhoneInput } from 'react-international-phone';
 import 'react-international-phone/style.css';
 import { EnvelopeSimple, PhoneOutgoing } from '@phosphor-icons/react';
-import { useFormSchema } from '../../Hooks/useFormContact';
-import Axios from 'axios';
-import { useMutation } from '@tanstack/react-query';
-import {Controller} from 'react-hook-form'
 import { Helmet } from 'react-helmet-async';
+import ContactForm from './Contact-form';
 
 export default function Contact() {
-    const [phone, setPhone] = useState("");
-
-    const { error, setError, handleSubmit, register, reset, control } = useFormSchema();
-   
-
-  const mutation: any = useMutation({
-    mutationFn: async ({data , phone}:any) => {
-          const response = await Axios.post("https://six-tech-server.onrender.com/contact/tech", {...data , phone});
-          return response.data;
-        },
-        onSuccess: () => {
-          reset();
-          setPhone("")
-          setError("Sent Successfully!");
-          setTimeout(() => setError(""), 2000);
-        },
-        onError: () => {
-          setError("Error Occurred!");
-          setTimeout(() => setError(""), 2000);
-        },
-      });
-
-
-  const onSubmit = (data: any) => {
-    mutation.mutate({ data, phone });
-    
-  };
-
-       
-
-
         
     return (
       <section className="contact">
@@ -78,7 +43,7 @@ export default function Contact() {
 
           <div className="two">
            <div className="form">
-           <form autoComplete='off' onSubmit={handleSubmit(onSubmit)}>
+           {/* <form autoComplete='off' onSubmit={handleSubmit(onSubmit)}>
                 <div className="input">
                     <h1>Name</h1>
                     <input type="text" placeholder='Name' {...register("name")} />
@@ -123,7 +88,8 @@ export default function Contact() {
                             disabled={mutation.isPending} 
                              type="submit"  />
                          </div>
-             </form>
+             </form> */}
+             <ContactForm/>
            </div>
           </div>
         </div>

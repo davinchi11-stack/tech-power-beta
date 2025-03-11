@@ -6,7 +6,7 @@ import EnrollmentForm from "./sub/p.contact";
 
 
 
-export  function ProductContact () {
+export default function ProductContact () {
 
     const {id} = useParams()
 

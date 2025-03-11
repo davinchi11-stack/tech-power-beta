@@ -6,6 +6,7 @@
     &_main{
        @include flex_col(3rem);
         .info{
+            padding-top: 3rem;
             @include flex(space-between, center , null, null);
             @include media("<=tablet"){
                 flex-direction: column;
@@ -116,7 +117,7 @@
         }
 
         .second-info{
-            padding-top: 3rem;
+            
             @include flex_col(2rem);
             @include media("<=tablet"){
               padding-top: 2rem;
@@ -146,7 +147,7 @@
             }
 
             .img{
-                width: 90%;
+                width: 80%;
                 margin: 0 auto;
                 border-radius: 100px;
                 overflow: hidden;

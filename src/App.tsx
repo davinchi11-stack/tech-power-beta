@@ -6,12 +6,10 @@ import { TechContextContaineer } from "./techContext/TextContext";
 import SmoothScroll from "./snothScroll/Smothscroll";
 import { QueryContainer } from "./Query/QueryContainer";
 import SvgComponent from './Components/programs/svg';
-import PrivacyPolicy from './use/privacy';
-import TermsOfUse from './use/terms';
 import TechPowerSchema from './techPowerSchema';
 import { HelmetProvider } from "react-helmet-async";
-import { ProductContact } from './Components/programs/programs-contact';
 import { Toaster } from "@/Components/ui/sonner"
+
 
 
 
@@ -25,7 +23,10 @@ const ErrorPage = lazy(() => import("./Components/404/404"));
 const Programs = lazy(() => import("./Components/programs/programs"));
 const ProgramsIndex = lazy(() => import("./Components/programs/programsIndex"));
 const ProgramsDetails = lazy(() => import("./Components/programs/programsDeatails"));
-
+const PrivacyPolicy =  lazy(() => import("./use/privacy"));
+const TermsOfUse = lazy(() => import("./use/terms"));
+const ProductContact = lazy(() => import("./Components/programs/programs-contact"));
+const InterShipMain = lazy(() => import('./Components/Intership/InterShip-main'))
 
 function App() {
 
@@ -68,11 +69,33 @@ function App() {
                   <Programs/>
               </Suspense>
               }/>
-             <Route path='/programs/details/:id' element={<ProgramsDetails/>}/>
-             <Route path='enroll-course/:id' element={<ProductContact/>}/>
+             <Route path='/programs/details/:id' element={
+               <Suspense fallback={<SvgComponent/>}>
+                  <ProgramsDetails/>
+              </Suspense>
+              }/>
+             <Route path='enroll-course/:id' element={
+               <Suspense fallback={<SvgComponent/>}>
+                  <ProductContact/>
+             </Suspense>
+              }/>
            </Route>
-           <Route path='privacy-policy' element={<PrivacyPolicy/>}/>
-           <Route path='terms-of-use' element={<TermsOfUse/>}/>
+
+           <Route path='privacy-policy' element={
+              <Suspense fallback={<SvgComponent/>}>
+                 <PrivacyPolicy/>
+               </Suspense>
+          }/>
+           <Route path='terms-of-use' element={
+             <Suspense fallback={<SvgComponent/>}>
+                  <TermsOfUse/>
+            </Suspense>
+            }/>
+              <Route path='internship' element={
+             <Suspense fallback={<SvgComponent/>}>
+                  <InterShipMain/>
+            </Suspense>
+            }/>
           </Route>
           <Route path='*' element={<ErrorPage/>} />
           </>
