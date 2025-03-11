@@ -69,7 +69,7 @@ const Footer2 = ({
   };
 
   return (
-    <section className="py-16 lg:py-24">
+    <div className="py-2 lg:py-2 w-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <footer className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
@@ -143,7 +143,7 @@ const Footer2 = ({
           </div>
         </footer>
       </div>
-    </section>
+    </div>
   );
 };
 

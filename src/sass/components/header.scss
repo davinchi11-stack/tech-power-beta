@@ -36,6 +36,9 @@
         nav{
             @include flex(space-between , center, null , null);
             padding: 0 20px;
+            @include media("<tablet"){
+                padding: 0 5px;
+            }
 
             .left{
                 @include flex(null , center, null , 3rem);
