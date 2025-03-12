@@ -1,4 +1,4 @@
-import InternshipForm from "./intership-form";
+// import InternshipForm from "./intership-form";
 import InternshipIntro from "./intership-intro";
 
 export default function () {
@@ -6,7 +6,7 @@ export default function () {
         <section className="intership">
             <div className="intership_main wrapper medium">
                 <InternshipIntro/>
-                <InternshipForm/>
+                {/* <InternshipForm/> */}
             </div>
         </section>
     )
