@@ -56,11 +56,20 @@ const internshipRoles = [
   "Data Science",
   "Product Management",
   "Customer Support",
-  "Other",
-]
+  "Graphics Design",
+  "Video Editing",
+  "Photography",
+  "Motion Graphics",
+  "Animation",
+  "Social Media Management",
+  "Cinematography",
+  "Videography",
+  "Other"
+];
+
 
 // Internship durations
-const internshipDurations = ["3 months", "6 months", "9 months", "12 months"]
+const internshipDurations = ["6 months", "9 months", "12 months"]
 
 // Referral sources
 const referralSources = [
@@ -80,15 +89,25 @@ const skillsList = [
   "React",
   "Node.js",
   "Python",
+  "HTML & CSS",
+  "TypeScript",
   "UI/UX Design",
   "Data Analysis",
+  "Graphic Design",
+  "Video Editing",
+  "Motion Graphics",
   "Marketing",
+  "Social Media Management",
   "Communication",
   "Project Management",
   "Problem Solving",
+  "Critical Thinking",
+  "Adaptability",
+  "Time Management",
   "Teamwork",
-  "Leadership",
-]
+  "Leadership"
+];
+
 
 // Define validation schemas for each step
 const personalInfoSchema = yup.object({
