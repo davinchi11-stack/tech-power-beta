@@ -7,7 +7,7 @@ import { SetStateAction } from "react"
 export const useInternshipMutate = (reset: () => void , setCurrentStep: { (value: SetStateAction<number>): void; (arg0: number): void }) => {
   const mutation = useMutation({
     mutationFn: async (data: any) => {
-      const response = await Axios.post("https://techpower-server-w8by.onrender.com/internship", data , {
+      const response = await Axios.post("https://techpower-server-w8by.onrender.com/api/internship", data , {
         headers: { "Content-Type": "multipart/form-data" },
       })
       return response.data 
