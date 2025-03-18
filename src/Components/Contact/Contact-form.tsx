@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Loader2 } from "lucide-react"
 import { Button } from "@/Components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/Components/ui/card"
@@ -15,7 +16,7 @@ const ContactForm = () =>  {
   const { handleSubmit, register, reset,  errors } = useFormSchema();
 
   const mutation: any = useMutation({
-    mutationFn: async (data: any) => {
+    mutationFn: async (data: unknown) => {
           const response = await Axios.post("https://six-tech-server.onrender.com/contact/tech" , data);
           return response.data;
         },
