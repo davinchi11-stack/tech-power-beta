@@ -61,11 +61,10 @@ export default function About () {
                             Empowering Africa's Future! your pathway to World-Class Tech Skills and Opportunities
                             </h1>
                             <p data-animation='para' className="p-boss">
-                            We bridge the gap between learning and employment by connecting our graduates with global tech job opportunities.
+                            TechPower is a forward-thinking EdTech platform that delivers hands-on, live online and in-class education in Technology, Business, and Skilled Trades. We pair these learning opportunities with scholarships and robust job placement support. 
                             </p>
                             <p data-animation='para'>
-                            Through scholarships and strategic partnerships, TechPower is committed to empowering 20 million African youths, setting them on a path to success in today’s dynamic digital landscap
-                            </p>
+                            TechPower is dedicated to bridging the gap between African talent and global opportunities, offering comprehensive skill development, scholarship access, career placement assistance, and community-building initiatives.                             </p>
                         </div>
                         <div className="btn">
                         <button data-animation='bounce'>Register Now
@@ -103,7 +102,9 @@ export default function About () {
                                   </div>
                              </div>
                              <div className="txt">
-                                <p data-animation='para'>To provide world-class tech education on scholarship to enables 20 million africans to thrive in the global workforce.</p>
+                                <p data-animation='para'>
+                                Our mission is to empower over 30,000 African professionals each year by equipping them with the in-demand skills needed to thrive in high-growth industries like Technology, Skilled Trades, and Business, while connecting them to both local and international career opportunities.
+                              </p>
                              </div>
                         </div>
 
